@@ -1,0 +1,12 @@
+apiversion: v1
+kind: service
+metadata:
+  name: freshapp-service
+spec:
+  selector:
+    app: freshapp
+  ports:
+    -  protocal: TCP
+       Port: 80
+       targetport: 3000
+  type:  NodePort     

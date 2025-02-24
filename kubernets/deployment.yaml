@@ -1,0 +1,20 @@
+apiversion: apps/v1
+kind: Deployment
+metadata:
+  name: freshapp
+spec:
+    replicas: 2
+    selector:
+        matchLables:
+            app: freshapp
+    template:
+        metadata:
+            labels:
+                app: freshapp
+        spec:
+          containers:
+          - name: freshapp
+            image: freshapp-latest
+            ports:
+            - containerPort: 3000
+            
